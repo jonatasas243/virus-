@@ -1,7 +1,16 @@
 import socket
 import subprocess
 from time import sleep
-IP = ''
+
+def get_local_ip():
+    try:
+        hostname = socket.gethostbyname()
+        local_ip = socket.gethostbyname(hostname)
+        return local_ip
+    except Exception as e:
+        print(f'erro ao obeter ip {e}')
+        return '127.0.0.1'
+IP = get_local_ip()
 PORT = 443
 
 def connet(ip,port):
